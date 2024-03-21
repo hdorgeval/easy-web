@@ -20,8 +20,10 @@ export const PublicPageLayout: FC<PublicPageLayoutOwnProps> = ({ children, htmlT
   return (
     <>
       <HambugerMenu />
-      {children}
-      <Footer />
+      <div className="container h-100 d-flex flex-column align-items-center overflow-y-scroll">
+        {children}
+        <Footer />
+      </div>
     </>
   );
 };

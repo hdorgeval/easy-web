@@ -13,7 +13,7 @@ export const SocialLinksHorizontalBar: FC = () => {
             relationship="nofollow"
             aria-label={websiteConfig.links.linkedin.label}
             title={websiteConfig.links.linkedin.title}
-            analyticsEvent="open-my-linkedin"
+            analyticsEvent={websiteConfig.links.linkedin.analyticEvent}
           >
             <i className="bi bi-linkedin"></i>
           </OpenExternalLink>
@@ -27,7 +27,7 @@ export const SocialLinksHorizontalBar: FC = () => {
             relationship="nofollow"
             aria-label={websiteConfig.links.facebook.label}
             title={websiteConfig.links.facebook.title}
-            analyticsEvent="open-my-facebook"
+            analyticsEvent={websiteConfig.links.facebook.analyticEvent}
           >
             <i className="bi bi-facebook"></i>
           </OpenExternalLink>
@@ -41,7 +41,7 @@ export const SocialLinksHorizontalBar: FC = () => {
             relationship="nofollow"
             aria-label={websiteConfig.links.whatsApp.label}
             title={websiteConfig.links.whatsApp.title}
-            analyticsEvent="open-my-whatsapp"
+            analyticsEvent={websiteConfig.links.whatsApp.analyticEvent}
           >
             <i className="bi bi-whatsapp"></i>
           </OpenExternalLink>
@@ -55,7 +55,7 @@ export const SocialLinksHorizontalBar: FC = () => {
             relationship="nofollow"
             aria-label={websiteConfig.links.youtube.label}
             title={websiteConfig.links.youtube.title}
-            analyticsEvent="open-my-youtube"
+            analyticsEvent={websiteConfig.links.youtube.analyticEvent}
           >
             <i className="bi bi-youtube"></i>
           </OpenExternalLink>
@@ -70,7 +70,7 @@ export const SocialLinksHorizontalBar: FC = () => {
             relationship="nofollow"
             aria-label={websiteConfig.links.instagram.label}
             title={websiteConfig.links.instagram.title}
-            analyticsEvent="open-my-instagram"
+            analyticsEvent={websiteConfig.links.instagram.analyticEvent}
           >
             <i className="bi bi-instagram"></i>
           </OpenExternalLink>
@@ -84,7 +84,7 @@ export const SocialLinksHorizontalBar: FC = () => {
             relationship="nofollow"
             aria-label={websiteConfig.links.phone.label}
             title={websiteConfig.links.phone.title}
-            analyticsEvent="appel-telephone"
+            analyticsEvent={websiteConfig.links.phone.analyticEvent}
           >
             <i className="bi bi-telephone-outbound"></i>
           </OpenExternalLink>
@@ -98,7 +98,7 @@ export const SocialLinksHorizontalBar: FC = () => {
             relationship="nofollow"
             aria-label={websiteConfig.links.email.label}
             title={websiteConfig.links.email.title}
-            analyticsEvent="envoie-mail"
+            analyticsEvent={websiteConfig.links.email.analyticEvent}
           >
             <i className="bi bi-envelope-at"></i>
           </OpenExternalLink>

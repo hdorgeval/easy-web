@@ -44,7 +44,7 @@ export const SocialLinksOffCanvas: FC = () => {
               className="btn btn-outline-light fw-bolder w-75 mt-4 text-nowrap"
               link={websiteConfig.links.calendly.url}
               title={websiteConfig.links.calendly.title}
-              analyticsEvent="rdv-ou-contact"
+              analyticsEvent={websiteConfig.links.calendly.analyticEvent}
             >
               <div className="d-flex flex-column align-items-center">
                 <span className="">{websiteConfig.links.calendly.label}</span>

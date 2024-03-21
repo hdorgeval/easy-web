@@ -14,7 +14,8 @@ export type MyAnalyticsEvent =
   | 'open-my-whatsapp'
   | 'open-my-youtube'
   | 'open-waze'
-  | 'open-contact-form';
+  | 'open-contact-form'
+  | 'send-contact-form';
 
 export type CommandType = 'js' | 'config' | 'event';
 declare global {

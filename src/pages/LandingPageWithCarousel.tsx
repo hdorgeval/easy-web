@@ -1,4 +1,4 @@
-import { FC, useCallback } from 'react';
+import { FC, useCallback, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ContactForm } from '../components/ContactForm';
 import { Description } from '../components/Description';
@@ -8,9 +8,18 @@ import { useHashToScrollIfNeeded } from '../hooks/useHashToScrollIfNeeded';
 import { websiteConfig } from '../website.config';
 import { PublicPageLayout } from './page-layout/PublicPageLayout';
 
-export const LandingPage: FC = () => {
+export const LandingPageWithCarousel: FC = () => {
   useHashToScrollIfNeeded('nearest');
+  const nextSlideButtonRef = useRef<HTMLButtonElement>(null);
   const { trackSimpleEvent } = useAnalytics();
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (nextSlideButtonRef?.current) {
+        nextSlideButtonRef.current?.click();
+      }
+    }, 3000);
+  }, []);
 
   const handleClickOnBienvenue = useCallback(() => {
     trackSimpleEvent('bienvenue');
@@ -22,47 +31,171 @@ export const LandingPage: FC = () => {
         id="home"
         className="w-100"
         data-bs-target="#navbarSupportedContent"
-        style={{ maxHeight: '100vh', maxWidth: '100vw' }}
+        style={{ maxHeight: '100vh' }}
       >
         <div
-          className="bg-overlay-50"
-          style={{
-            backgroundImage: 'url(/images/backgrounds/landing-page.jpg)',
-            minHeight: '100vh',
-            maxHeight: '100vh',
-            backgroundPositionX: '29%',
-            backgroundPositionY: '29%',
-            backgroundSize: 'cover',
-            position: 'relative',
-            overflow: 'hidden',
-            backgroundRepeat: 'no-repeat',
-            zIndex: 1,
-          }}
+          id="home-carousel"
+          className="carousel slide carousel-fade w-100"
+          data-bs-ride="carousel"
+          data-bs-pause="true"
+          data-bs-interval="30000"
+          data-bs-theme="dark"
         >
-          <div
-            className="d-flex flex-column justify-content-start align-items-center"
-            style={{ height: '100vh' }}
-          >
-            <div className="flex-grow-half"></div>
-            <h1 className="font-montserrat text-light fw-bolder fs-big-1">Création Web</h1>
-            <div className="container row justify-content-center">
-              <div className="col-lg-8 col-md-10 text-center">
-                <p className="text-light font-montserrat mt-4 fs-2">
-                  Votre site web sur mesure pour briller dans le monde du bien-être et du
-                  développement personnel.
-                </p>
+          <div className="carousel-indicators mb-0">
+            <button
+              className="active bg-white pt-1"
+              type="button"
+              data-bs-target="#home-carousel"
+              data-bs-slide-to="0"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              className="ms-4 bg-white pt-1"
+              type="button"
+              data-bs-target="#home-carousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+              ref={nextSlideButtonRef}
+            ></button>
+            <button
+              className="ms-4 bg-white pt-1"
+              type="button"
+              data-bs-target="#home-carousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <div
+                className="bg-overlay-50"
+                style={{
+                  backgroundImage: 'url(/images/backgrounds/landing-page-4.jpg)',
+                  minHeight: '100vh',
+                  maxHeight: '100vh',
+                  backgroundPositionX: '29%',
+                  backgroundPositionY: '29%',
+                  backgroundSize: 'cover',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  backgroundRepeat: 'no-repeat',
+                  zIndex: 1,
+                }}
+              >
+                <div
+                  className="d-flex flex-column justify-content-start align-items-center"
+                  style={{ height: '100vh' }}
+                >
+                  <div className="flex-grow-half"></div>
+                  <h1 className="font-montserrat text-light fw-bolder fs-big-1">Création Web</h1>
+                  <div className="container row justify-content-center">
+                    <div className="col-lg-8 col-md-10 text-center">
+                      <p className="text-light font-montserrat mt-4 ">
+                        Votre site web sur mesure pour briller dans le monde du bien-être et du
+                        développement personnel.
+                      </p>
+                    </div>
+                  </div>
+
+                  <a
+                    className="btn btn-outline-light fw-bolder w-25 mt-4 font-dancing-script fs-big-1 wow fadeInUp"
+                    data-wow-duration="1.3s"
+                    data-wow-delay="0.8s"
+                    href="#bienvenue"
+                    onClick={handleClickOnBienvenue}
+                  >
+                    Découvrir
+                  </a>
+                </div>
               </div>
             </div>
+            <div className="carousel-item">
+              <div
+                className="bg-overlay-50"
+                style={{
+                  backgroundImage: 'url(/images/backgrounds/landing-page-2.jpg)',
+                  minHeight: '100vh',
+                  maxHeight: '100vh',
+                  backgroundPositionX: '45%',
+                  backgroundPositionY: '29%',
+                  backgroundSize: 'cover',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  backgroundRepeat: 'no-repeat',
+                  zIndex: 1,
+                }}
+              >
+                <div
+                  className="d-flex flex-column justify-content-start align-items-center"
+                  style={{ height: '100vh' }}
+                >
+                  <div className="flex-grow-half"></div>
+                  <h1 className="font-mali text-light fw-bolder fs-1">Au coeur de l'écoute</h1>
+                  <div className="container row justify-content-center">
+                    <div className="col-lg-8 col-md-10 text-center">
+                      <p className="text-light font-playfair mt-4 ">
+                        Un modèle de site web basé sur Bootstrap 5 et HTML5, comprenant tous les
+                        éléments et fonctionnalités essentiels pour commencer son site web
+                        professionnel.
+                      </p>
+                    </div>
+                  </div>
 
-            <a
-              className="font-montserrat btn btn-outline-light fw-bolder w-25 mt-4  fs-big-1"
-              data-wow-duration="1.3s"
-              data-wow-delay="0.8s"
-              href="#bienvenue"
-              onClick={handleClickOnBienvenue}
-            >
-              Découvrir
-            </a>
+                  <a
+                    className="btn btn-outline-light fw-bolder w-75 mt-4 font-dancing-script fs-big-1 wow fadeInUp"
+                    data-wow-duration="1.3s"
+                    data-wow-delay="0.8s"
+                    href="#bienvenue"
+                  >
+                    Bienvenue !
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <div
+                className="bg-overlay-50"
+                style={{
+                  backgroundImage: 'url(/images/backgrounds/landing-page-3.png)',
+                  minHeight: '100vh',
+                  maxHeight: '100vh',
+                  backgroundPositionX: '54%',
+                  backgroundPositionY: '29%',
+                  backgroundSize: 'cover',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  backgroundRepeat: 'no-repeat',
+                  zIndex: 1,
+                }}
+              >
+                <div
+                  className="d-flex flex-column justify-content-start align-items-center"
+                  style={{ height: '100vh' }}
+                >
+                  <div className="flex-grow-half"></div>
+                  <h1 className="font-mali text-light fw-bolder fs-1">Au coeur de la vibration</h1>
+                  <div className="container row justify-content-center">
+                    <div className="col-lg-8 col-md-10 text-center">
+                      <p className="text-light font-playfair mt-4 ">
+                        Un modèle de site web basé sur Bootstrap 5 et HTML5, comprenant tous les
+                        éléments et fonctionnalités essentiels pour commencer son site web
+                        professionnel.
+                      </p>
+                    </div>
+                  </div>
+
+                  <a
+                    className="btn btn-outline-light fw-bolder w-75 mt-4 font-dancing-script fs-big-1 wow fadeInUp"
+                    data-wow-duration="1.3s"
+                    data-wow-delay="0.8s"
+                    href="#bienvenue"
+                  >
+                    Bienvenue !
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -250,4 +383,4 @@ export const LandingPage: FC = () => {
   );
 };
 
-LandingPage.displayName = 'LandingPage';
+LandingPageWithCarousel.displayName = 'LandingPageWithCarousel';
