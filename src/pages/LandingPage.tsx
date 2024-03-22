@@ -25,7 +25,7 @@ export const LandingPage: FC = () => {
         <div
           className=""
           style={{
-            backgroundImage: 'url(/images/backgrounds/landing-page.jpg)',
+            backgroundImage: 'url(/images/backgrounds/landing-page.webp)',
             minHeight: '100vh',
             maxHeight: '100vh',
             backgroundPositionX: '17%',
@@ -85,7 +85,7 @@ export const LandingPage: FC = () => {
                   width="128px"
                   height="180px"
                   className="object-fit-fill rounded-circle img-thumbnail p-0 border-0 "
-                  src="/images/portraits/portrait.png"
+                  src="/images/portraits/portrait.webp"
                   alt="portrait d'Henri d'Orgeval"
                   style={{ width: '8rem', minWidth: '8rem' }}
                 />
