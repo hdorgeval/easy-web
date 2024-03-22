@@ -6,6 +6,10 @@
   background-position: 29%;
 }
 
+.z-index-3 {
+  z-index: 3 !important;
+}
+
 .fw-medium {
   font-weight: 500 !important;
 }

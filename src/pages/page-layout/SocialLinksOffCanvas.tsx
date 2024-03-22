@@ -8,7 +8,7 @@ export const SocialLinksOffCanvas: FC = () => {
   return (
     <>
       <button
-        className="btn btn-dark badge rounded-pill navbar-toggler border border-0 position-absolute bottom-0 end-0 me-2"
+        className="btn btn-dark badge rounded-pill navbar-toggler border border-0 position-fixed bottom-0 end-0 me-2 z-index-3"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasSocialLinks"
