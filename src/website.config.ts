@@ -59,11 +59,11 @@ export const websiteConfig: WebSiteConfig = {
   hamburgerMenuPosition: 'left',
   socialLinksMenuPosition: 'bottom',
   websiteSubTitle: 'Lorem ipsum dolor sit amet',
-  websiteTitle: 'Spirale Intérieure',
-  websiteShortTitle: 'Spirale Intérieure',
-  websiteUrl: 'https://spirale-interieure.com',
+  websiteTitle: 'Création Web',
+  websiteShortTitle: 'SmartWeb Design',
+  websiteUrl: 'https://smartweb-design.com',
   legalNotice: {
-    lastUpdate: '2023/06/21',
+    lastUpdate: '2024/03/21',
   },
   displayGuidedTour: true,
   displaySocialLinksInFooter: true,
@@ -71,7 +71,7 @@ export const websiteConfig: WebSiteConfig = {
   displayAccountButtons: false,
   links: {
     phone: {
-      url: '0601908352',
+      url: '0614763770',
       title: "M'appeler au téléphone",
       label: 'Phone',
       show: true,
@@ -95,7 +95,7 @@ export const websiteConfig: WebSiteConfig = {
       url: 'https://www.instagram.com/isabelle.hervouet92/?hl=fr',
       title: 'Me contacter sur Instagram',
       label: 'Instagram',
-      show: true,
+      show: false,
       analyticEvent: 'open-my-instagram',
     },
     facebook: {
@@ -154,13 +154,6 @@ export const websiteConfig: WebSiteConfig = {
     size: 'normal',
   },
   selectOptions: {
-    'contact-form-subjects': [
-      { label: 'Constellations familiales et systémiques' },
-      { label: 'La Trame' },
-      { label: 'Massage Tantrique - Tao' },
-      { label: 'Sophrologie' },
-      { label: 'Thème de naissance par le tarot de Marseille' },
-      { label: 'Autre' },
-    ],
+    'contact-form-subjects': [{ label: 'Sujet 1' }, { label: 'Sujet 2' }, { label: 'Autre' }],
   },
 };

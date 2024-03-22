@@ -25,13 +25,13 @@ export const LandingPage: FC = () => {
         style={{ maxHeight: '100vh', maxWidth: '100vw' }}
       >
         <div
-          className="bg-overlay-50"
+          className=""
           style={{
             backgroundImage: 'url(/images/backgrounds/landing-page.jpg)',
             minHeight: '100vh',
             maxHeight: '100vh',
-            backgroundPositionX: '29%',
-            backgroundPositionY: '29%',
+            backgroundPositionX: '17%',
+            backgroundPositionY: '98%',
             backgroundSize: 'cover',
             position: 'relative',
             overflow: 'hidden',
@@ -40,29 +40,35 @@ export const LandingPage: FC = () => {
           }}
         >
           <div
-            className="d-flex flex-column justify-content-start align-items-center"
-            style={{ height: '100vh' }}
+            style={{
+              background: 'linear-gradient(to bottom,rgba(63 87 132 / 97%), rgba(31 72 90 / 0%))',
+              height: '100vh',
+            }}
           >
-            <div className="flex-grow-half"></div>
-            <h1 className="font-montserrat text-light fw-bolder fs-big-1">Création Web</h1>
-            <div className="container row justify-content-center">
-              <div className="col-lg-8 col-md-10 text-center">
-                <p className="text-light font-montserrat mt-4 fs-2">
-                  Votre site web sur mesure pour briller dans le monde du bien-être et du
-                  développement personnel.
-                </p>
-              </div>
-            </div>
-
-            <a
-              className="font-montserrat btn btn-outline-light fw-bolder w-25 mt-4  fs-big-1"
-              data-wow-duration="1.3s"
-              data-wow-delay="0.8s"
-              href="#bienvenue"
-              onClick={handleClickOnBienvenue}
+            <div
+              className="d-flex flex-column justify-content-start align-items-center"
+              style={{ height: '100vh' }}
             >
-              Découvrir
-            </a>
+              <div className="flex-grow-half"></div>
+              <h1 className="font-montserrat text-light fw-bolder fs-big-1">Création Web</h1>
+              <div className="container row justify-content-center">
+                <div className="col-lg-8 col-md-10 text-center">
+                  <p className="text-light font-montserrat mt-4 fs-2">
+                    Votre site web sur mesure pour briller dans le monde du bien-être et du
+                    développement personnel.
+                  </p>
+                </div>
+              </div>
+
+              <a
+                className="font-montserrat btn btn-outline-light fs-1 fw-bolder w-50 mt-auto mb-auto"
+                href="#bienvenue"
+                onClick={handleClickOnBienvenue}
+              >
+                Découvrir
+              </a>
+              <div className="" style={{ minHeight: '5vh' }}></div>
+            </div>
           </div>
         </div>
       </section>
