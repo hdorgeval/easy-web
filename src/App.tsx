@@ -2,11 +2,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { UserContext, useUserContextInfo } from './contexts/userContext';
 import { ErrorPage } from './pages/ErrorPage';
 import { LandingPage } from './pages/LandingPage';
+import { MentionsLegales } from './pages/MentionsLegales';
 const router = createBrowserRouter([
   {
     path: '/',
     element: <LandingPage />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: '/mentions-legales',
+    element: <MentionsLegales />,
   },
 ]);
 

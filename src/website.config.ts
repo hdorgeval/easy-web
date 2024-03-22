@@ -31,6 +31,7 @@ export interface RecaptchaV2 {
 
 export interface LegalNotice {
   lastUpdate: string; // date in ISO format : yyyy/mm/dd
+  editor: string;
 }
 
 export interface Link {
@@ -64,6 +65,7 @@ export const websiteConfig: WebSiteConfig = {
   websiteUrl: 'https://smartweb-design.com',
   legalNotice: {
     lastUpdate: '2024/03/21',
+    editor: "Henri d'Orgeval",
   },
   displayGuidedTour: true,
   displaySocialLinksInFooter: true,
@@ -78,7 +80,7 @@ export const websiteConfig: WebSiteConfig = {
       analyticEvent: 'appel-telephone',
     },
     email: {
-      url: 'spirale.interieure@gmail.com',
+      url: 'henri.dorgeval@outlook.fr',
       title: "M'envoyer un e-mail",
       label: 'Email',
       show: true,
@@ -99,7 +101,7 @@ export const websiteConfig: WebSiteConfig = {
       analyticEvent: 'open-my-instagram',
     },
     facebook: {
-      url: 'https://www.facebook.com/isabelle.hervouet.14',
+      url: 'https://www.facebook.com/profile.php?id=100081612311209',
       title: 'Me contacter sur Facebook',
       label: 'Facebook',
       show: true,
@@ -113,7 +115,7 @@ export const websiteConfig: WebSiteConfig = {
       analyticEvent: 'open-my-linkedin',
     },
     whatsApp: {
-      url: 'https://wa.me/33601908352',
+      url: 'https://wa.me/33614763770',
       title: 'Me contacter sur WhatsApp',
       label: 'WhatsApp',
       show: true,
@@ -137,14 +139,14 @@ export const websiteConfig: WebSiteConfig = {
       url: 'https://goo.gl/maps/UBKeixobxevtXr9X9',
       title: 'Itinéraire via Google Maps',
       label: 'Itinéraire via G. Maps',
-      show: true,
+      show: false,
       analyticEvent: 'open-google-maps',
     },
     waze: {
       url: 'https://ul.waze.com/ul?ll=47.17886960%2C-1.67614460&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location',
       title: 'Itinéraire via Waze',
       label: 'Itinéraire via Waze',
-      show: true,
+      show: false,
       analyticEvent: 'open-waze',
     },
   },
