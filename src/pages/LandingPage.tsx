@@ -75,26 +75,28 @@ export const LandingPage: FC = () => {
         id="bienvenue"
         data-bs-target="#navbarSupportedContent"
         className="w-100"
-        style={{ backgroundColor: '#4f46e5' }}
+        style={{ backgroundColor: 'rgb(50 96 92)' }}
       >
         <div className="container">
           <div className="d-flex flex-column text-start text-light font-dancing-script fs-3 py-4">
             <div className="d-flex flex-row justify-content-center align-items-center">
               <div className="border-photo">
                 <img
+                  width="128px"
+                  height="180px"
                   className="object-fit-fill rounded-circle img-thumbnail p-0 border-0 "
                   src="/images/portraits/portrait.png"
-                  alt="Logo"
+                  alt="portrait d'Henri d'Orgeval"
                   style={{ width: '8rem', minWidth: '8rem' }}
                 />
               </div>
               <div className="w-100 ms-4">Je suis Henri d'Orgeval</div>
             </div>
             <Description>
-              Je suis là pour soutenir ceux qui travaillent dans le domaine du bien-être et du
-              développement personnel, et qui désirent un site web rapide, original, efficace et
-              personnalisé. En tant qu'interface dédiée proactive, je prends en charge la gestion
-              clés-en-main de votre site web pour votre confort.
+              J'aide ceux qui sont dans le domaine du bien-être et du développement personnel, et
+              qui désirent un site web rapide, original, efficace et personnalisé. En tant
+              qu'interface dédiée proactive, je fourni votre site web clés en main, et j'assure
+              ensuite l'intégralité de sa gestion.
             </Description>
             <Link
               to="/qui-suis-je"
