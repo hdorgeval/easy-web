@@ -109,16 +109,16 @@ export const LandingPage: FC = () => {
               <Description>
                 Je développe des sites web pour les professionnels du bien-être et du développement
                 personnel, qu'ils débutent dans le domaine ou qu'ils cherchent à renouveler leur
-                présence en ligne. Fondé sur une approche de co-création active, mon processus
-                consiste à vous écouter de manière proactive et à prendre en compte chaque idée que
-                vous apportez. Je mets ensuite ma créativité et mon expertise à votre service pour
-                donner vie à un site web qui reflète votre essence et vos valeurs. En tant
-                qu'interlocuteur unique dédié, je vous fournis un site clés en main et assure
-                ensuite sa gestion complète, vous permettant ainsi de vous concentrer sur ce que
-                vous faites de mieux : partager votre expertise et offrir le meilleur de vous-même à
-                vos clients. Grâce à cette approche, vous pourrez offrir à vos visiteurs une
-                expérience en ligne qui inspire la paix et le bien-être, renforçant ainsi votre
-                impact et votre présence sur le web.
+                présence en ligne. Fondé sur une approche de co-création, mon processus consiste à
+                vous écouter de manière proactive et à prendre en compte chaque idée que vous
+                apportez. Je mets ensuite ma créativité et mon expertise à votre service pour donner
+                vie à un site web qui reflète votre essence et vos valeurs. En tant qu'interlocuteur
+                unique dédié, je vous fournis un site clés en main et assure ensuite sa gestion
+                complète, vous permettant ainsi de vous concentrer sur ce que vous faites de mieux :
+                exercer votre expertise et offrir le meilleur de vous-même à vos clients. Grâce à
+                cette approche, vous pourrez offrir à vos visiteurs une expérience en ligne qui
+                inspire la paix et le bien-être, renforçant ainsi votre impact et votre présence sur
+                le web.
               </Description>
               <Link
                 to="/qui-suis-je"
@@ -126,7 +126,7 @@ export const LandingPage: FC = () => {
                 title="En savoir plus sur qui je suis"
                 aria-label="En savoir plus sur qui je suis"
               >
-                <span className="btn btn-outline-light fw-bolder my-4 font-raleway">
+                <span className="btn btn-outline-light btn-outline-light-custom fw-bolder my-4 font-raleway">
                   En savoir plus
                 </span>
               </Link>
