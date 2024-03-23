@@ -108,7 +108,7 @@ export const LandingPage: FC = () => {
               </div>
               <Description>
                 Je développe des sites web pour les professionnels du bien-être et du développement
-                personnel, qu'ils débutent dans le domaine ou qu'ils cherchent à renouveler leur
+                personnel, qu'ils débutent dans leur domaine ou qu'ils cherchent à renouveler leur
                 présence en ligne. Fondé sur une approche de co-création, mon processus consiste à
                 vous écouter de manière proactive et à prendre en compte chaque idée que vous
                 apportez. Je mets ensuite ma créativité et mon expertise à votre service pour donner
