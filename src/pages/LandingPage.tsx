@@ -93,7 +93,7 @@ export const LandingPage: FC = () => {
           }}
         >
           <div className="container">
-            <div className="d-flex flex-column text-start text-light font-raleway fs-3 py-4">
+            <div className="d-flex flex-column text-start text-light font-raleway fs-3 fw-medium py-4">
               <div className="d-flex flex-row justify-content-center align-items-center mb-3 mt-2">
                 <div className="border-photo">
                   <img
