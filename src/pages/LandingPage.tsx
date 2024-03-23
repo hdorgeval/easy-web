@@ -82,7 +82,6 @@ export const LandingPage: FC = () => {
           style={{
             backgroundImage: 'url(/images/backgrounds/section-qui-suis-je.webp)',
             minHeight: '100vh',
-            maxHeight: '100vh',
             backgroundPositionX: '17%',
             backgroundPositionY: '98%',
             backgroundSize: 'cover',
@@ -108,10 +107,18 @@ export const LandingPage: FC = () => {
                 <div className="w-100 ms-4">Je suis Henri d'Orgeval</div>
               </div>
               <Description>
-                J'aide ceux qui sont dans le domaine du bien-être et du développement personnel, et
-                qui désirent un site web rapide, original, efficace et personnalisé. En tant
-                qu'interface dédiée proactive, je fourni votre site web clés en main, et j'assure
-                ensuite l'intégralité de sa gestion.
+                Je développe des sites web pour les professionnels du bien-être et du développement
+                personnel, qu'ils débutent dans le domaine ou qu'ils cherchent à renouveler leur
+                présence en ligne. Fondé sur une approche de co-création active, mon processus
+                consiste à vous écouter de manière proactive et à prendre en compte chaque idée que
+                vous apportez. Je mets ensuite ma créativité et mon expertise à votre service pour
+                donner vie à un site web qui reflète votre essence et vos valeurs. En tant
+                qu'interlocuteur unique dédié, je vous fournis un site clés en main et assure
+                ensuite sa gestion complète, vous permettant ainsi de vous concentrer sur ce que
+                vous faites de mieux : partager votre expertise et offrir le meilleur de vous-même à
+                vos clients. Grâce à cette approche, vous pourrez offrir à vos visiteurs une
+                expérience en ligne qui inspire la paix et le bien-être, renforçant ainsi votre
+                impact et votre présence sur le web.
               </Description>
               <Link
                 to="/qui-suis-je"
