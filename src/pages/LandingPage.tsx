@@ -77,37 +77,53 @@ export const LandingPage: FC = () => {
         className="w-100"
         style={{ backgroundColor: 'rgb(50 96 92)' }}
       >
-        <div className="container">
-          <div className="d-flex flex-column text-start text-light font-dancing-script fs-3 py-4">
-            <div className="d-flex flex-row justify-content-center align-items-center">
-              <div className="border-photo">
-                <img
-                  width="128px"
-                  height="180px"
-                  className="object-fit-fill rounded-circle img-thumbnail p-0 border-0 "
-                  src="/images/portraits/portrait.webp"
-                  alt="portrait d'Henri d'Orgeval"
-                  style={{ width: '8rem', minWidth: '8rem' }}
-                />
+        <div
+          className=""
+          style={{
+            backgroundImage: 'url(/images/backgrounds/section-qui-suis-je.webp)',
+            minHeight: '100vh',
+            maxHeight: '100vh',
+            backgroundPositionX: '17%',
+            backgroundPositionY: '98%',
+            backgroundSize: 'cover',
+            position: 'relative',
+            overflow: 'hidden',
+            backgroundRepeat: 'no-repeat',
+            zIndex: 1,
+          }}
+        >
+          <div className="container">
+            <div className="d-flex flex-column text-start text-light font-raleway fs-3 py-4">
+              <div className="d-flex flex-row justify-content-center align-items-center mb-3 mt-2">
+                <div className="border-photo">
+                  <img
+                    width="128px"
+                    height="180px"
+                    className="object-fit-fill rounded-circle img-thumbnail p-0 border-0 "
+                    src="/images/portraits/portrait.webp"
+                    alt="portrait d'Henri d'Orgeval"
+                    style={{ width: '8rem', minWidth: '8rem', opacity: '0.9' }}
+                  />
+                </div>
+                <div className="w-100 ms-4">Je suis Henri d'Orgeval</div>
               </div>
-              <div className="w-100 ms-4">Je suis Henri d'Orgeval</div>
+              <Description>
+                J'aide ceux qui sont dans le domaine du bien-être et du développement personnel, et
+                qui désirent un site web rapide, original, efficace et personnalisé. En tant
+                qu'interface dédiée proactive, je fourni votre site web clés en main, et j'assure
+                ensuite l'intégralité de sa gestion.
+              </Description>
+              <Link
+                to="/qui-suis-je"
+                className="text-decoration-none text-light"
+                title="En savoir plus sur qui je suis"
+                aria-label="En savoir plus sur qui je suis"
+              >
+                <span className="btn btn-outline-light fw-bolder my-4 font-raleway">
+                  En savoir plus
+                </span>
+              </Link>
             </div>
-            <Description>
-              J'aide ceux qui sont dans le domaine du bien-être et du développement personnel, et
-              qui désirent un site web rapide, original, efficace et personnalisé. En tant
-              qu'interface dédiée proactive, je fourni votre site web clés en main, et j'assure
-              ensuite l'intégralité de sa gestion.
-            </Description>
-            <Link
-              to="/qui-suis-je"
-              className="text-decoration-none text-light"
-              title="En savoir plus sur qui je suis"
-              aria-label="En savoir plus sur qui je suis"
-            >
-              <span className="btn btn-outline-light fw-bolder my-4 font-playfair">
-                En savoir plus
-              </span>
-            </Link>
           </div>
         </div>
       </section>
