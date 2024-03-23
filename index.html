@@ -51,8 +51,16 @@
       gtag('config', 'G-HFG8L2P9HV');
     </script>
 
-    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
-
+    <script>
+      function loadRecaptcha() {
+        const script = document.createElement('script');
+        script.async = true;
+        script.defer = true;
+        script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
+        document.body.appendChild(script);
+      }
+      window.setTimeout(loadRecaptcha, 5000);
+    </script>
     <!-- A little help for the Netlify post-processing bots -->
     <form name="Contact" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
       <input name="bot-field" />
