@@ -1,5 +1,4 @@
 import { FC, useCallback } from 'react';
-import { Link } from 'react-router-dom';
 import { Description } from '../components/Description';
 import { useAnalytics } from '../hooks/useAnalytics';
 import { useHashToScrollIfNeeded } from '../hooks/useHashToScrollIfNeeded';
@@ -120,7 +119,7 @@ export const LandingPage: FC = () => {
                 inspire la paix et le bien-être, renforçant ainsi votre impact et votre présence sur
                 le web.
               </Description>
-              <Link
+              {/* <Link
                 to="/qui-suis-je"
                 className="text-decoration-none text-light"
                 title="En savoir plus sur qui je suis"
@@ -129,7 +128,7 @@ export const LandingPage: FC = () => {
                 <span className="btn btn-outline-light btn-outline-light-custom fw-bolder my-4 font-raleway">
                   En savoir plus
                 </span>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

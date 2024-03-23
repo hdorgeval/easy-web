@@ -61,7 +61,7 @@ export const websiteConfig: WebSiteConfig = {
   socialLinksMenuPosition: 'bottom',
   websiteSubTitle: 'Lorem ipsum dolor sit amet',
   websiteTitle: 'Création Web',
-  websiteShortTitle: 'SmartWeb Design',
+  websiteShortTitle: 'Smart web design',
   websiteUrl: 'https://smartweb-design.com',
   legalNotice: {
     lastUpdate: '2024/03/21',

@@ -7,11 +7,11 @@ export const HambugerMenu: FC = () => {
   const isOnHomePage = useMemo(() => {
     return location.pathname === '/';
   }, [location.pathname]);
-  const backgroundImageUrl = '/images/backgrounds/burger-menu-01.webp';
-  const computedBackgroundPositionX = -220;
+  const backgroundImageUrl = '/images/backgrounds/burger-menu.webp';
+  const computedBackgroundPositionX = -21;
   const computedBackgroundPositionY = 0;
   const defaultBackgroundOverlay =
-    'linear-gradient(to bottom,rgba(0, 0, 0, 0.3), rgba(79, 79, 93, 0.10))';
+    'linear-gradient(to bottom,rgba(17, 2, 2, 0.69), rgba(79, 79, 93, 0.01))';
 
   return (
     <>
@@ -67,7 +67,7 @@ export const HambugerMenu: FC = () => {
           }}
         >
           <div className="container h-100 overflow-y-scroll">
-            <div className="offcanvas-header">
+            <div className="offcanvas-header justify-content-between">
               <h4 className="offcanvas-title text-light fw-bolder" id="offcanvasDarkNavbarLabel">
                 {websiteConfig.websiteShortTitle}
               </h4>
@@ -129,17 +129,17 @@ export const HambugerMenu: FC = () => {
                     Mes offres
                   </div>
                   <div className="d-flex p-1 flex-row flex-wrap align-items-center">
-                    <Link to="/theme-de-naissance-par-le-tarot-de-marseille">
+                    <Link to="/#">
                       <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                        Thème de naissance par le tarot de Marseille
+                        Plan Essentiel
                       </span>
                     </Link>
-                    <Link to="/la-trame">
+                    <Link to="/#">
                       <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                        La Trame
+                        Plan Premium
                       </span>
                     </Link>
-                    <Link to="/massage-tantrique-tao">
+                    {/* <Link to="/massage-tantrique-tao">
                       <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                         Massage Tantrique - Tao
                       </span>
@@ -153,7 +153,7 @@ export const HambugerMenu: FC = () => {
                       <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                         Constellations familiales et systémiques
                       </span>
-                    </Link>
+                    </Link> */}
                   </div>
                 </li>
 
