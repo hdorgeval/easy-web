@@ -18,6 +18,12 @@
 
 [Google Analytics](https://analytics.google.com/analytics)
 
+## Google reCAPTCHA
+
+[create reCAPTCHA](https://www.google.com/recaptcha/admin/create)
+
+[reCAPTCHA status](https://www.google.com/recaptcha/admin/site/676436105)
+
 # Bootstrap 5
 
 [Get started](https://getbootstrap.com/docs/5.3/getting-started/introduction/)

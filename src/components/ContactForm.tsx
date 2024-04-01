@@ -184,8 +184,8 @@ export const ContactForm: FC<ContactFormOwnProps> = ({
           className={`form-control ${formBackgroundClassName}`}
           name="Disponibilités"
           id="contact-field-when-i-am-available"
-          rows={2}
-          placeholder="Vos disponibilités (jours / horaires)"
+          rows={3}
+          placeholder="Vos disponibilités (jours / horaires) : indiquez ici à quel moment je peux échanger avec vous."
           required
         ></textarea>
         <div className={invalidFeedbackClassNames}>Vous devez saisir vos disponibilités.</div>

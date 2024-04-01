@@ -7,13 +7,19 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
   <url>
-    <loc>https://mysite.com/</loc>
+    <loc>https://smartweb-design.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://mysite.com/qui-suis-je</loc>
+    <loc>https://smartweb-design.com/contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://smartweb-design.com/qui-suis-je</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

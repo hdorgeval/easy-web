@@ -151,11 +151,15 @@ export const websiteConfig: WebSiteConfig = {
     },
   },
   recaptchaV2: {
-    sitekey: '6LeGmIYpAAAAADiTPzIerxVlDXkAF6WjDbY_ahM-',
+    sitekey: '6LfbF6spAAAAAAfb6XpjdrpTAP4kaZt2cEoLKjWR',
     theme: 'dark',
     size: 'normal',
   },
   selectOptions: {
-    'contact-form-subjects': [{ label: 'Sujet 1' }, { label: 'Sujet 2' }, { label: 'Autre' }],
+    'contact-form-subjects': [
+      { label: "Création d'un site web" },
+      { label: 'Reprise de mon site web' },
+      { label: 'Autre' },
+    ],
   },
 };
