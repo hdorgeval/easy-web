@@ -368,7 +368,7 @@
 }
 
 .form-control.form-contact {
-  background-color: rgb(4 47 89 / 65%) !important;
+  background-color: rgb(4 47 89 / 0%) !important;
   border-top-right-radius: var(--bs-border-radius) !important;
   border-bottom-right-radius: var(--bs-border-radius) !important;
 }
@@ -377,7 +377,7 @@
   color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
 }
 .form-select.form-contact {
-  background-color: rgb(4 47 89 / 65%) !important;
+  background-color: rgb(4 47 89 / 0%) !important;
 }
 input.form-contact:autofill {
   background-color: rgb(4 47 89 / 65%) !important;

@@ -9,8 +9,8 @@ export const ContactMe: FC = () => {
   return (
     <PublicPageLayoutWithFixedBackgroundImage
       backgroundImageUrl="/images/backgrounds/contact-me.webp"
-      backgroundOverlay="linear-gradient(to bottom,rgba(0, 0, 0, 0.1), rgba(79, 79, 93, 0.40))"
-      backgroundPositionX="95%"
+      backgroundOverlay="linear-gradient(to bottom,rgba(0, 0, 0, 0.0), rgba(79, 79, 93, 0.0))"
+      backgroundPositionX="90%"
       backgroundPositionY="35%"
       htmlTitle={`Contact | ${websiteConfig.websiteTitle}`}
     >
@@ -20,7 +20,7 @@ export const ContactMe: FC = () => {
         </div>
         <div className="" style={{ minHeight: '1vh' }}></div>
         <SemiTransparentTile
-          background="linear-gradient(rgb(75, 117, 125, 0.48), rgba(79, 79, 93, 0.2))"
+          background="linear-gradient(rgb(75, 117, 125, 0.0), rgba(79, 79, 93, 0.0))"
           className="card card-lg text-start text-light fs-5 font-monserrat px-4 py-3 m-2 fw-bolder"
         >
           <ContactForm
