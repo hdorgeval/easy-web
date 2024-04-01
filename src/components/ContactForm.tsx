@@ -196,7 +196,7 @@ export const ContactForm: FC<ContactFormOwnProps> = ({
       </div>
 
       <div className="col-12">
-        <button type="submit" className="btn btn-primary w-100 fw-medium">
+        <button type="submit" className="btn btn-outline-light w-100 fs-2 fw-medium">
           Envoyer
         </button>
       </div>
