@@ -8,10 +8,10 @@ export const HambugerMenu: FC = () => {
     return location.pathname === '/';
   }, [location.pathname]);
   const backgroundImageUrl = '/images/backgrounds/burger-menu.webp';
-  const computedBackgroundPositionX = -21;
+  const computedBackgroundPositionX = 0;
   const computedBackgroundPositionY = 0;
   const defaultBackgroundOverlay =
-    'linear-gradient(to bottom,rgba(17, 2, 2, 0.69), rgba(79, 79, 93, 0.01))';
+    'linear-gradient(to right,rgba(32, 49, 60, 1), rgba(79, 79, 93, 0.01))';
 
   return (
     <>

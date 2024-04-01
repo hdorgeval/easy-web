@@ -14,7 +14,7 @@
     "tsc-init": "tsc --init",
     "tsc": "tsc --listEmittedFiles",
     "test-sendgrid": "ts-node netlify/sendgrid/hello-world.ts",
-    "compress-image": "cwebp -q 50 public/images/backgrounds/contact-me.jpg -o public/images/backgrounds/contact-me.webp"
+    "compress-image": "cwebp -q 50 public/images/backgrounds/burger-menu.png -o public/images/backgrounds/burger-menu.webp"
   },
   "dependencies": {
     "@netlify/functions": "2.6.0",
