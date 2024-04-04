@@ -74,7 +74,7 @@ export const HambugerMenu: FC = () => {
               <button
                 id="hamburger-close-button"
                 type="button"
-                className="btn border border-0"
+                className="btn border border-0 pe-0"
                 data-bs-dismiss="offcanvas"
                 aria-label="Fermer le menu"
                 title="Fermer le menu"
@@ -82,7 +82,7 @@ export const HambugerMenu: FC = () => {
                 <span className="btn-close-thick-3 text-white"></span>
               </button>
             </div>
-            <div className="offcanvas-body fs-6 pt-0">
+            <div className="offcanvas-body fs-6 pt-2">
               <ul className="navbar-nav justify-content-start align-items-start flex-grow-1 pe-3">
                 <li className="nav-item w-100 text-start">
                   <div className="d-flex p-1 flex-row flex-wrap align-items-center">
