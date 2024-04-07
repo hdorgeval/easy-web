@@ -13,6 +13,7 @@ export const Recaptcha: FC<RecaptchaOwnProps> = ({ theme, invalidFeedbackClassNa
   const [hasLoadedRecaptchaApi, setHasLoadedRecaptchaApi] = useState(false);
   const [recaptchaResponse, setRecaptchaResponse] = useState<string>('');
   const [captchaId, setCaptchaId] = useState<number | null>(null);
+  const [waitForRecaptachCounter, setWaitForRecaptachCounter] = useState<number>(0);
 
   const captchaCallback = useCallback((response: string) => {
     try {
@@ -29,6 +30,27 @@ export const Recaptcha: FC<RecaptchaOwnProps> = ({ theme, invalidFeedbackClassNa
       /* empty */
     }
   }, []);
+
+  useEffect(() => {
+    try {
+      const hasLoaded = window.grecaptcha !== undefined ? true : false;
+      if (hasLoaded) {
+        setHasLoadedRecaptchaApi(true);
+        return;
+      }
+
+      setTimeout(() => {
+        if (window.grecaptcha !== undefined) {
+          setHasLoadedRecaptchaApi(true);
+          return;
+        }
+        setWaitForRecaptachCounter(waitForRecaptachCounter + 1);
+      }, 1000);
+    } catch (error) {
+      /* empty */
+    }
+  }, [hasLoadedRecaptchaApi, waitForRecaptachCounter]);
+
   useEffect(() => {
     try {
       if (grecaptcha && typeof captchaId === 'number') {
@@ -51,27 +73,8 @@ export const Recaptcha: FC<RecaptchaOwnProps> = ({ theme, invalidFeedbackClassNa
   useEffect(() => {
     try {
       if (!hasLoadedRecaptchaApi) {
-        setTimeout(() => {
-          try {
-            if (grecaptcha) {
-              setHasLoadedRecaptchaApi(true);
-            }
-          } catch (error) {
-            /* empty */
-          }
-        }, 3000);
-      }
-    } catch (error) {
-      /* empty */
-    }
-  }, [hasLoadedRecaptchaApi]);
-
-  useEffect(() => {
-    try {
-      if (!hasLoadedRecaptchaApi) {
         return;
       }
-
       const captchaContainer = document.querySelector(
         'div[data-netlify-recaptcha="true"]',
       ) as HTMLDivElement;
