@@ -10,8 +10,10 @@ export const HambugerMenu: FC = () => {
   const backgroundImageUrl = '/images/backgrounds/burger-menu.webp';
   const computedBackgroundPositionX = 0;
   const computedBackgroundPositionY = 0;
-  const defaultBackgroundOverlay =
-    'linear-gradient(to right,rgba(32, 49, 60, 1), rgba(79, 79, 93, 0.01))';
+  const defaultLeftToRightBackgroundOverlay =
+    'linear-gradient(to right,rgba(18, 39, 40, 0.39), rgba(73, 69, 77, 0))';
+  const defaultRightToLeftBackgroundOverlay =
+    'linear-gradient(to left,rgba(39, 54, 54, 0.3), rgba(73, 69, 77, 0))';
 
   return (
     <>
@@ -62,84 +64,90 @@ export const HambugerMenu: FC = () => {
       >
         <div
           style={{
-            background: `${defaultBackgroundOverlay}`,
+            background: `${defaultLeftToRightBackgroundOverlay}`,
             height: '100vh',
           }}
         >
-          <div className="container h-100 overflow-y-scroll">
-            <div className="offcanvas-header justify-content-between">
-              <h4 className="offcanvas-title text-light fw-bolder" id="offcanvasDarkNavbarLabel">
-                {websiteConfig.websiteShortTitle}
-              </h4>
-              <button
-                id="hamburger-close-button"
-                type="button"
-                className="btn border border-0 pe-0"
-                data-bs-dismiss="offcanvas"
-                aria-label="Fermer le menu"
-                title="Fermer le menu"
-              >
-                <span className="btn-close-thick-3 text-white"></span>
-              </button>
-            </div>
-            <div className="offcanvas-body fs-6 pt-2">
-              <ul className="navbar-nav justify-content-start align-items-start flex-grow-1 pe-3">
-                <li className="nav-item w-100 text-start">
-                  <div className="d-flex p-1 flex-row flex-wrap align-items-center">
-                    <Link
-                      to="/"
-                      className="text-decoration-none text-light"
-                      aria-current="page"
-                      title="Accueil"
-                      aria-label="Accueil"
-                    >
-                      <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                        Accueil
-                      </span>
-                    </Link>
-                    <Link
-                      to="/qui-suis-je"
-                      className="text-decoration-none text-light"
-                      title="Qui suis-je ?"
-                      aria-label="Qui suis-je ?"
-                    >
-                      <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                        Qui suis-je ?
-                      </span>
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="text-decoration-none text-light"
-                      title="Contact"
-                      aria-label="Contact"
-                    >
-                      <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                        Contact
-                      </span>
-                    </Link>
-                    {/* <Link to="/temoignages" className="text-decoration-none text-light">
+          <div
+            style={{
+              background: `${defaultRightToLeftBackgroundOverlay}`,
+              height: '100vh',
+            }}
+          >
+            <div className="container h-100 overflow-y-scroll">
+              <div className="offcanvas-header justify-content-between">
+                <h4 className="offcanvas-title text-light fw-bolder" id="offcanvasDarkNavbarLabel">
+                  {websiteConfig.websiteShortTitle}
+                </h4>
+                <button
+                  id="hamburger-close-button"
+                  type="button"
+                  className="btn border border-0 pe-0"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Fermer le menu"
+                  title="Fermer le menu"
+                >
+                  <span className="btn-close-thick-3 text-white"></span>
+                </button>
+              </div>
+              <div className="offcanvas-body fs-6 pt-2">
+                <ul className="navbar-nav justify-content-start align-items-start flex-grow-1 pe-3">
+                  <li className="nav-item w-100 text-start">
+                    <div className="d-flex p-1 flex-row flex-wrap align-items-center">
+                      <Link
+                        to="/"
+                        className="text-decoration-none text-light"
+                        aria-current="page"
+                        title="Accueil"
+                        aria-label="Accueil"
+                      >
+                        <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
+                          Accueil
+                        </span>
+                      </Link>
+                      <Link
+                        to="/qui-suis-je"
+                        className="text-decoration-none text-light"
+                        title="Qui suis-je ?"
+                        aria-label="Qui suis-je ?"
+                      >
+                        <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
+                          Qui suis-je ?
+                        </span>
+                      </Link>
+                      <Link
+                        to="/contact"
+                        className="text-decoration-none text-light"
+                        title="Contact"
+                        aria-label="Contact"
+                      >
+                        <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
+                          Contact
+                        </span>
+                      </Link>
+                      {/* <Link to="/temoignages" className="text-decoration-none text-light">
                     <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                       Témoignages
                     </span>
                   </Link> */}
-                  </div>
-                </li>
-                <li className="nav-item w-100 text-start mt-3">
-                  <div className=" w-100 border-bottom border-secondary fs-5 text-light fw-bolder">
-                    Mes offres
-                  </div>
-                  <div className="d-flex p-1 flex-row flex-wrap align-items-center">
-                    <Link to="/#">
-                      <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                        Plan Essentiel
-                      </span>
-                    </Link>
-                    <Link to="/#">
-                      <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                        Plan Premium
-                      </span>
-                    </Link>
-                    {/* <Link to="/massage-tantrique-tao">
+                    </div>
+                  </li>
+                  <li className="nav-item w-100 text-start mt-3">
+                    <div className=" w-100 border-bottom border-secondary fs-5 text-light fw-bolder">
+                      Mes offres
+                    </div>
+                    <div className="d-flex p-1 flex-row flex-wrap align-items-center">
+                      <Link to="/#">
+                        <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
+                          Plan Essentiel
+                        </span>
+                      </Link>
+                      <Link to="/#">
+                        <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
+                          Plan Premium
+                        </span>
+                      </Link>
+                      {/* <Link to="/massage-tantrique-tao">
                       <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                         Massage Tantrique - Tao
                       </span>
@@ -154,10 +162,10 @@ export const HambugerMenu: FC = () => {
                         Constellations familiales et systémiques
                       </span>
                     </Link> */}
-                  </div>
-                </li>
+                    </div>
+                  </li>
 
-                {/* <li className="nav-item w-100 text-start mt-3">
+                  {/* <li className="nav-item w-100 text-start mt-3">
                 <div className="w-100 border-bottom border-secondary fs-6 text-secondary d-flex p-1 flex-row flex-wrap align-items-center">
                   <span>Mon espace client</span>
                 </div>
@@ -168,29 +176,30 @@ export const HambugerMenu: FC = () => {
                   <LogoutAccountBadge />
                 </div>
               </li> */}
-                <li className="nav-item w-100 text-start mt-3">
-                  <div className="w-100 border-bottom border-secondary fs-6 text-light fw-bolder d-flex p-1 flex-row flex-wrap align-items-center">
-                    <span>Crédits</span>
-                  </div>
-                  <div className="d-flex p-1 flex-row flex-wrap align-items-center">
-                    <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                      web design: Henri d'Orgeval
-                    </span>
-                  </div>
-                </li>
-                <li className="nav-item w-100 text-start mt-3">
-                  <div className="w-100 border-bottom border-secondary fs-6 text-light fw-bolder d-flex p-1 flex-row flex-wrap align-items-center">
-                    <span>Confiance numérique</span>
-                  </div>
-                  <div className="d-flex p-1 flex-row flex-wrap align-items-center">
-                    <Link to="/mentions-legales">
+                  <li className="nav-item w-100 text-start mt-3">
+                    <div className="w-100 border-bottom border-secondary fs-6 text-light fw-bolder d-flex p-1 flex-row flex-wrap align-items-center">
+                      <span>Crédits</span>
+                    </div>
+                    <div className="d-flex p-1 flex-row flex-wrap align-items-center">
                       <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                        Mentions légales
+                        web design: Henri d'Orgeval
                       </span>
-                    </Link>
-                  </div>
-                </li>
-              </ul>
+                    </div>
+                  </li>
+                  <li className="nav-item w-100 text-start mt-3">
+                    <div className="w-100 border-bottom border-secondary fs-6 text-light fw-bolder d-flex p-1 flex-row flex-wrap align-items-center">
+                      <span>Confiance numérique</span>
+                    </div>
+                    <div className="d-flex p-1 flex-row flex-wrap align-items-center">
+                      <Link to="/mentions-legales">
+                        <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
+                          Mentions légales
+                        </span>
+                      </Link>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
