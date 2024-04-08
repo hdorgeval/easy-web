@@ -6,4 +6,4 @@ function loadRecaptcha() {
   script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
   document.body.appendChild(script);
 }
-window.setTimeout(loadRecaptcha, 5000);
+window.setTimeout(loadRecaptcha, 500);
