@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://<your domain name>/sitemap.xml
-Host: https://<your domain name>
+Sitemap: https://smartweb-design.com/sitemap.xml
+Host: https://smartweb-design.com
