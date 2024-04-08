@@ -3,7 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="manifest" href="manifest.json" />
-
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        script-src 'self' https://www.googletagmanager.com/gtag/js https://www.google.com/recaptcha/api.js https://www.gstatic.com;
+        font-src 'self' https://fonts.gstatic.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/;
+        form-action 'self';
+        object-src 'self';
+        img-src 'self' data: https://www.google.com/recaptcha;
+        child-src 'self' https://www.gstatic.com https://www.google.com;
+      "
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -44,25 +55,11 @@
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFG8L2P9HV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-HFG8L2P9HV');
-    </script>
+    <script src="/inline-scripts/gtag.js"></script>
 
-    <script>
-      function loadRecaptcha() {
-        const script = document.createElement('script');
-        script.async = true;
-        script.defer = true;
-        script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
-        document.body.appendChild(script);
-      }
-      window.setTimeout(loadRecaptcha, 5000);
-    </script>
+    <!-- Lazy load recaptcha -->
+    <script src="/inline-scripts/recaptcha.js"></script>
+
     <!-- A little help for the Netlify post-processing bots -->
     <form name="Contact" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
       <input name="bot-field" />

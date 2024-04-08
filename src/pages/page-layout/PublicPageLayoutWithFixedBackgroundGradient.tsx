@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { usePublicPage } from '../../contexts/userContext';
 import { useGuidedTour } from '../../hooks/useGuidedTour';
 import { useMetaDescription } from '../../hooks/useMetaDescription';
 import { useOffCanvasBackdropRemover } from '../../hooks/useOffCanvasBackdropRemover';
@@ -16,7 +15,7 @@ export const PublicPageLayoutWithFixedBackgroundGradient: FC<
   PageLayoutWithBackgroundGradientOwnProps
 > = ({ backgroundOverlay, children, htmlTitle }) => {
   useOffCanvasBackdropRemover();
-  usePublicPage();
+  // usePublicPage();
   useGuidedTour();
   useTitle(htmlTitle);
   useMetaDescription(htmlTitle);
