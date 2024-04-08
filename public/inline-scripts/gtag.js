@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-undef
+/* eslint-disable no-undef */
 window.dataLayer = window.dataLayer || [];
 function gtag() {
   // eslint-disable-next-line no-undef

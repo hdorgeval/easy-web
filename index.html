@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="manifest" href="manifest.json" />
+    <script src="/inline-scripts/trusted-types-policy.js"></script>
     <meta
       http-equiv="Content-Security-Policy"
       content="
@@ -13,6 +14,7 @@
         object-src 'self';
         img-src 'self' data: https://www.google.com/recaptcha;
         child-src 'self' https://www.gstatic.com https://www.google.com;
+        require-trusted-types-for 'script';
       "
     />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
