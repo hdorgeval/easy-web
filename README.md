@@ -31,3 +31,4 @@
 # Content Security Policy
 
 [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
+[Content Security Policy Reference](https://content-security-policy.com/)
