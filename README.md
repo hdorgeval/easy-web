@@ -31,4 +31,5 @@
 # Content Security Policy
 
 [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
+[MDN: Content Security Policy Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
 [Content Security Policy Reference](https://content-security-policy.com/)
