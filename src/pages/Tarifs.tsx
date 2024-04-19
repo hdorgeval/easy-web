@@ -268,7 +268,7 @@ export const Tarifs: FC = () => {
                           référencement du site dès sa création. Pour être visible sur Google, un
                           site doit respecter certaines normes techniques et des bonnes pratiques au
                           niveau des contenus des pages. Je fournis un rapport mensuel, similaire su
-                          screenshot ci-dessous, sur le nombre de clicks et le nombre d'impressions
+                          screenshot ci-dessous, sur le nombre de clics et le nombre d'impressions
                           de votre site dans la recherche google.
                         </Description>
                         <div className="card text-bg-dark">
