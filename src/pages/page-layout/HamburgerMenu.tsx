@@ -137,7 +137,7 @@ export const HambugerMenu: FC = () => {
                       Mes offres
                     </div>
                     <div className="d-flex p-1 flex-row flex-wrap align-items-center">
-                      <Link to="/#">
+                      <Link to="/tarifs#plan-essentiel">
                         <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                           Plan Essentiel
                         </span>

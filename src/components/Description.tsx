@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 function toClosedSentence(sentence: string): string {
-  const decodedSentence = decodeThreeDots(decodeExclamationPoint(sentence));
+  const decodedSentence = decodeThreeDots(decodeDotCom(decodeExclamationPoint(sentence)));
   if (hasExclamationPointAtTheEnd(decodedSentence) || hasThreeDotsAtTheEnd(decodedSentence)) {
     return decodedSentence;
   }
@@ -21,6 +21,10 @@ function encodeThreeDots(sentence: string): string {
   return sentence.replaceAll('...', '|||');
 }
 
+function encodeDotCom(sentence: string): string {
+  return sentence.replaceAll('.com', '|com');
+}
+
 function encodeExclamationPoint(sentence: string): string {
   return sentence.replaceAll('!', 'III.');
 }
@@ -31,6 +35,10 @@ function encodeNote(sentence: string): string {
 
 function decodeThreeDots(sentence: string): string {
   return sentence.replaceAll('|||', '...');
+}
+
+function decodeDotCom(sentence: string): string {
+  return sentence.replaceAll('|com', '.com');
 }
 function decodeExclamationPoint(sentence: string): string {
   return sentence.replaceAll('III', '!');
@@ -95,7 +103,7 @@ export const Description: FC<DescriptionOwnProps> = ({
     return <>{children}</>;
   }
   const text = children;
-  const sentences = encodeThreeDots(encodeExclamationPoint(text))
+  const sentences = encodeThreeDots(encodeDotCom(encodeExclamationPoint(text)))
     .split('.')
     .map((s) => s.trim())
     .filter((s) => s.length > 0);

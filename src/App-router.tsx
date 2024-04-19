@@ -5,6 +5,7 @@ import { ContactMe } from './pages/ContactMe';
 import { ErrorPage } from './pages/ErrorPage';
 import { LandingPage } from './pages/LandingPage';
 import { MentionsLegales } from './pages/MentionsLegales';
+import { Tarifs } from './pages/Tarifs';
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ export const router = createBrowserRouter([
   {
     path: '/contact',
     element: <ContactMe />,
+  },
+  {
+    path: '/tarifs',
+    element: <Tarifs />,
   },
   {
     path: '/contact/success',
