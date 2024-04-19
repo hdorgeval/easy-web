@@ -189,7 +189,7 @@ export const Tarifs: FC = () => {
                           Trouver un nom de domaine qui reflète qui vous êtes et ce que vous
                           proposez n'est pas une chose facile. Je vous aide à trouver un nom de
                           domaine qui n'existe pas encore. Le nom de domaine sera sous la forme
-                          https://mon-site-web.com. IL est enregistré pour une durée de un an.
+                          https://mon-site-web.com. Il est enregistré pour une durée de un an.
                         </Description>
                       </div>
                     </div>
