@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { useCalendar } from '../../hooks/useCalendar';
+import { useCurrentYear } from '../../hooks/useCalendar';
 import { websiteConfig } from '../../website.config';
 import { SocialLinksHorizontalBar } from './SocialLinksHorizontalBar';
 import { SocialLinksOffCanvas } from './SocialLinksOffCanvas';
 export const Footer: FC = () => {
-  const { currentYear } = useCalendar();
+  const currentYear = useCurrentYear();
 
   return (
     <footer className="p-4">
@@ -26,5 +26,3 @@ export const Footer: FC = () => {
     </footer>
   );
 };
-
-Footer.displayName = 'Footer';
