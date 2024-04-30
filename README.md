@@ -1,6 +1,6 @@
-# easy-web
+# Smart Web Design
 
-# Personal Website React template with Bootstrap 5
+## Personal Website React template with Bootstrap 5
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/213636b7-0b51-4537-a342-6e554e164928/deploy-status)](https://app.netlify.com/sites/well-being-personal-website-template/deploys)
 
@@ -14,6 +14,10 @@
 
 ## Google Analytics
 
+[Google Tag Install](https://developers.google.com/tag-platform/gtagjs/install)
+
+[Google Tag Assistant](https://tagassistant.google.com/)
+
 [Google search console](https://search.google.com/search-console)
 
 [Google Analytics](https://analytics.google.com/analytics)
@@ -24,11 +28,11 @@
 
 [reCAPTCHA status](https://www.google.com/recaptcha/admin/site/676436105)
 
-# Bootstrap 5
+## Bootstrap 5
 
 [Get started](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
-# Content Security Policy
+## Content Security Policy
 
 [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 [MDN: Content Security Policy Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
