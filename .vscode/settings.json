@@ -17,5 +17,11 @@
   "typescript.referencesCodeLens.showOnAllFunctions": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "prettier.endOfLine": "lf",
-  "ltex.language": "fr"
+  "ltex.language": "fr",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
 }
