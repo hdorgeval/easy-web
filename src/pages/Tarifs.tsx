@@ -78,6 +78,94 @@ export const Tarifs: FC = () => {
 
               <TransparentListGroupItem className="pt-2 pb-1 text-light fw-bolder">
                 <div
+                  id="accordion-premium-design"
+                  className="accordion card-subtitle pt-1"
+                  style={{ backgroundColor: 'transparent' }}
+                >
+                  <div
+                    className="accordion-item border-0 border-bottom-1"
+                    style={{ backgroundColor: 'transparent' }}
+                  >
+                    <button
+                      className="accordion-button collapsed fs-5 fw-semi-bold py-0 px-0 align-items-start"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse-max-number-of-forms"
+                      aria-expanded="false"
+                      aria-controls="collapse-max-number-of-forms"
+                      style={{ backgroundColor: 'transparent' }}
+                    >
+                      <i className="bi bi-check-lg me-2"></i>
+                      Nombre d'envoi de formulaires &lt;= 90 / mois
+                    </button>
+                    <div
+                      id="collapse-max-number-of-forms"
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#accordion-max-number-of-forms"
+                    >
+                      <div className="accordion-body fs-6 fw-semi-bold">
+                        <Description>
+                          Il s'agit des formulaires envoyés par les utilisateurs de votre site web
+                          pour une prise de rendez-vous, une inscription, un contact ou tout autre
+                          demande. Au delà de 90 formulaires envoyés dans le mois, l'envoi de
+                          formulaires additionnels sera automatiquement désactivé jusqu'au début du
+                          mois suivant. Chaque formulaire envoyé par un utilisateur vous est
+                          transféré automatiquement à l'adresse mail de votre choix.
+                        </Description>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </TransparentListGroupItem>
+
+              <TransparentListGroupItem className="pt-2 pb-1 text-light fw-bolder">
+                <div
+                  id="accordion-premium-design"
+                  className="accordion card-subtitle pt-1"
+                  style={{ backgroundColor: 'transparent' }}
+                >
+                  <div
+                    className="accordion-item border-0 border-bottom-1"
+                    style={{ backgroundColor: 'transparent' }}
+                  >
+                    <button
+                      className="accordion-button collapsed fs-5 fw-semi-bold py-0 px-0 align-items-start"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse-premium-design"
+                      aria-expanded="false"
+                      aria-controls="collapse-max-number-of-forms"
+                      style={{ backgroundColor: 'transparent' }}
+                    >
+                      <i className="bi bi-check-lg me-2"></i>
+                      Création du site avec un design et des recommandations premium
+                    </button>
+                    <div
+                      id="collapse-premium-design"
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#accordion-premium-design"
+                    >
+                      <div className="accordion-body fs-6 fw-semi-bold">
+                        <Description>
+                          En tant qu'interlocuteur unique dédié, je contribue, si vous en ressentez
+                          le besoin, à la création du contenu de votre site aussi bien au niveau du
+                          texte qu'au niveau des images. Je peux mettre rapidement en ligne une
+                          version initiale à partir de laquelle vous pouvez demander des changements
+                          qui correspondent exactement à ce que vous voulez. Vous pouvez, par
+                          exemple, choisir d'utiliser une ou plusieurs polices de caractères
+                          spécifiques. Je mets l'accent sur l'adaptabilité, la disponibilité et la
+                          rapidité des échanges pour assurer le succès de votre projet : c'est le
+                          principe de la méthodolgie agile qui permet une interaction continue et
+                          une livraison rapide.
+                        </Description>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </TransparentListGroupItem>
+
+              <TransparentListGroupItem className="pt-2 pb-1 text-light fw-bolder">
+                <div
                   id="accordion01a"
                   className="accordion card-subtitle pt-1"
                   style={{ backgroundColor: 'transparent' }}
@@ -373,7 +461,8 @@ export const Tarifs: FC = () => {
                       <div className="accordion-body fs-6 fw-semi-bold ">
                         <Description>
                           Si vous utilisez Calendly pour gérer vos rendez-vous, vos pages Calendly
-                          pourront être intégrées sur votre site web.
+                          pourront être intégrées sur votre site web sous la forme d'un bouton
+                          "prendre rendez-vous".
                         </Description>
                       </div>
                     </div>
@@ -409,7 +498,46 @@ export const Tarifs: FC = () => {
                       <div className="accordion-body fs-6 fw-semi-bold">
                         <Description>
                           Si vous utilisez Google Form pour gérer vos inscriptions, vos formulaires
-                          Google Form pourront être intégrés sur votre site web.
+                          Google Form pourront être intégrés sur votre site web sous la forme d'un
+                          bouton "s'inscrire".
+                        </Description>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </TransparentListGroupItem>
+
+              <TransparentListGroupItem className="pt-2 pb-1 text-light fw-bolder">
+                <div
+                  id="accordion-integration-billet-web"
+                  className="accordion card-subtitle pt-1"
+                  style={{ backgroundColor: 'transparent' }}
+                >
+                  <div
+                    className="accordion-item border-0 border-bottom-1"
+                    style={{ backgroundColor: 'transparent' }}
+                  >
+                    <button
+                      className="accordion-button collapsed fs-5 fw-semi-bold py-0 px-0 align-items-start"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse-integration-bilet-web"
+                      aria-expanded="false"
+                      aria-controls="collapse-integration-bilet-web"
+                      style={{ backgroundColor: 'transparent' }}
+                    >
+                      <i className="bi bi-check-lg me-2"></i>Intégration avec BilletWeb
+                    </button>
+                    <div
+                      id="collapse-integration-bilet-web"
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#accordion-integration-billet-web"
+                    >
+                      <div className="accordion-body fs-6 fw-semi-bold">
+                        <Description>
+                          Si vous utilisez BilletWeb pour gérer vos billeteries, ces dernières
+                          pourront être intégrées sur votre site web sous la forme d'un bouton
+                          "s'inscrire".
                         </Description>
                       </div>
                     </div>
