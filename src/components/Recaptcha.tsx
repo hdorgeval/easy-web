@@ -18,7 +18,7 @@ export const Recaptcha: FC<RecaptchaOwnProps> = ({ theme, invalidFeedbackClassNa
   const captchaCallback = useCallback((response: string) => {
     try {
       setRecaptchaResponse(response);
-    } catch (error) {
+    } catch (_error) {
       /* empty */
     }
   }, []);
@@ -26,14 +26,14 @@ export const Recaptcha: FC<RecaptchaOwnProps> = ({ theme, invalidFeedbackClassNa
   const expiredCaptchaCallback = useCallback(() => {
     try {
       setRecaptchaResponse('');
-    } catch (error) {
+    } catch (_error) {
       /* empty */
     }
   }, []);
 
   useEffect(() => {
     try {
-      const hasLoaded = window.grecaptcha !== undefined ? true : false;
+      const hasLoaded = window.grecaptcha !== undefined;
       if (hasLoaded) {
         setHasLoadedRecaptchaApi(true);
         return;
@@ -46,10 +46,10 @@ export const Recaptcha: FC<RecaptchaOwnProps> = ({ theme, invalidFeedbackClassNa
         }
         setWaitForRecaptachCounter(waitForRecaptachCounter + 1);
       }, 1000);
-    } catch (error) {
+    } catch (_error) {
       /* empty */
     }
-  }, [hasLoadedRecaptchaApi, waitForRecaptachCounter]);
+  }, [waitForRecaptachCounter]);
 
   useEffect(() => {
     try {
@@ -60,12 +60,12 @@ export const Recaptcha: FC<RecaptchaOwnProps> = ({ theme, invalidFeedbackClassNa
               grecaptcha.reset(captchaId);
               setRecaptchaResponse('');
             }
-          } catch (error) {
+          } catch (_error) {
             /* empty */
           }
         };
       }
-    } catch (error) {
+    } catch (_error) {
       /* empty */
     }
   }, [captchaId]);
@@ -109,11 +109,11 @@ export const Recaptcha: FC<RecaptchaOwnProps> = ({ theme, invalidFeedbackClassNa
               }
             }
           }, 0);
-        } catch (error) {
+        } catch (_error) {
           /* empty */
         }
       }
-    } catch (error) {
+    } catch (_error) {
       /* empty */
     }
   }, [captchaCallback, expiredCaptchaCallback, hasLoadedRecaptchaApi, theme]);
@@ -125,7 +125,9 @@ export const Recaptcha: FC<RecaptchaOwnProps> = ({ theme, invalidFeedbackClassNa
         id="contact-field-recaptcha-response"
         className="form-control d-none"
         value={recaptchaResponse}
-        onChange={() => {}}
+        onChange={() => {
+          // no-op
+        }}
         required
       />
       <div className={`invalid-feedback mt-n2 ${invalidFeedbackClassName ?? ''}`}>

@@ -85,7 +85,7 @@ function addPaswwordVisibilityToggler(): void {
     if (inputContainer && fragment) {
       passwordInput.parentElement?.appendChild(fragment);
     }
-  } catch (error) {
+  } catch (_error) {
     // do nothing
   }
 }

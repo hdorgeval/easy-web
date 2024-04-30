@@ -161,7 +161,7 @@ export const useGuidedTour = () => {
         if (hasStarted && remainingSteps.length === 0) {
           tour.exit(true);
         }
-      } catch (error) {
+      } catch (_error) {
         // TODO : log error
       }
     }, 2000);

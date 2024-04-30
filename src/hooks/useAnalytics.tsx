@@ -28,7 +28,7 @@ export const useAnalytics = () => {
   const trackSimpleEvent = useCallback((myEvent: MyAnalyticsEvent) => {
     try {
       window.gtag('event', myEvent);
-    } catch (error) {
+    } catch (_error) {
       // no op
     }
   }, []);
@@ -36,7 +36,7 @@ export const useAnalytics = () => {
   const trackOpenExternalLinkEvent = useCallback((url: string) => {
     try {
       window.gtag('event', 'open-external-link', { url });
-    } catch (error) {
+    } catch (_error) {
       // no op
     }
   }, []);

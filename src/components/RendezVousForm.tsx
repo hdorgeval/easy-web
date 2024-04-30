@@ -54,7 +54,9 @@ export const RendezVousForm: FC<RendezVousFormOwnProps> = ({
       })
         .then(() => navigate('/contact/success'))
         .catch(() => navigate('/contact/error'))
-        .finally(() => {});
+        .finally(() => {
+          // TODO: save form data to another backend
+        });
     },
     [analyticsEvent, navigate, trackSimpleEvent],
   );
