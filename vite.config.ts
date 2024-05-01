@@ -15,6 +15,7 @@ export default defineConfig({
           ['bootstrap.min.js']: ['bootstrap/dist/js/bootstrap.js'],
           ['bootstrap-icons']: ['bootstrap-icons/font/bootstrap-icons.css'],
           ['introjs.css']: ['intro.js/introjs.css', 'intro.js/themes/introjs-modern.css'],
+          ['recharts']: ['recharts'],
         },
       },
     },
