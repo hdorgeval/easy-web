@@ -16,7 +16,8 @@
     "test-sendgrid": "ts-node netlify/sendgrid/hello-world.ts",
     "compress-image": "cwebp -q 50 public/images/backgrounds/burger-menu.png -o public/images/backgrounds/burger-menu.webp",
     "migrate-eslint-to-biome": "biome migrate eslint --write",
-    "migrate-prettier-to-biome": "biome migrate prettier --write"
+    "migrate-prettier-to-biome": "biome migrate prettier --write",
+    "csv2json-dates": "csv2json src/data/google-search/Dates.csv -o src/data/google-search/Dates.json"
   },
   "dependencies": {
     "@netlify/functions": "2.6.0",
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.1",
+    "@mrodrig/json-2-csv-cli": "5.0.0",
     "@types/grecaptcha": "3.0.8",
     "@types/react": "18.2.67",
     "@types/react-dom": "18.2.22",
