@@ -34,7 +34,7 @@ export const HambugerMenu: FC = () => {
 
   return (
     <>
-      <nav className="navbar navbar-dark sticky-top position-fixed top-0 end-0 w-100">
+      <nav className="navbar navbar-dark sticky-top position-absolute top-0 end-0 w-100">
         <div
           className={`container-fluid pe-0 me-1 d-flex flex-row ${
             websiteConfig.hamburgerMenuPosition === 'left' ? 'flex-row-reverse' : ''
@@ -145,7 +145,7 @@ export const HambugerMenu: FC = () => {
                         </span>
                       </Link>
                       <Link
-                        to="/#dernieres-realisations"
+                        to="/dernieres-realisations"
                         className="text-decoration-none text-light"
                         title="Dernières réalisations"
                         aria-label="Dernières réalisations"

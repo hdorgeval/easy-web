@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { ContactFormError } from './pages/ContactFormError';
 import { ContactFormSuccessfullySent } from './pages/ContactFormSuccessfullySent';
 import { ContactMe } from './pages/ContactMe';
+import { DernieresRealisations } from './pages/DernieresRealisations';
 import { ErrorPage } from './pages/ErrorPage';
 import { LandingPage } from './pages/LandingPage';
 import { MentionsLegales } from './pages/MentionsLegales';
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
   {
     path: '/tarifs',
     element: <Tarifs />,
+  },
+  {
+    path: '/dernieres-realisations',
+    element: <DernieresRealisations />,
   },
   {
     path: '/contact/success',
