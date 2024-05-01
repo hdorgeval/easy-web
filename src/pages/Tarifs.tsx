@@ -340,7 +340,7 @@ const PlanEssentiel: FC = () => {
                     actions spécifiques auprès de Google, de façon à déclencher le référencement du
                     site dès sa création. Pour être visible sur Google, un site doit respecter
                     certaines normes techniques et des bonnes pratiques au niveau des contenus des
-                    pages. Je fournis un rapport mensuel, similaire su screenshot ci-dessous, sur le
+                    pages. Je fournis un rapport mensuel, similaire au screenshot ci-dessous, sur le
                     nombre de clics et le nombre d'impressions de votre site dans la recherche
                     google.
                   </Description>
