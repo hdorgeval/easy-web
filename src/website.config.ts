@@ -60,8 +60,8 @@ export const websiteConfig: WebSiteConfig = {
   hamburgerMenuPosition: 'left',
   socialLinksMenuPosition: 'bottom',
   websiteSubTitle: 'Lorem ipsum dolor sit amet',
-  websiteTitle: 'Création Web',
-  websiteShortTitle: 'Smart web design',
+  websiteTitle: 'Smart Web Design',
+  websiteShortTitle: 'Création web',
   websiteUrl: 'https://smartweb-design.com',
   legalNotice: {
     lastUpdate: '2024/03/21',
@@ -94,7 +94,7 @@ export const websiteConfig: WebSiteConfig = {
       analyticEvent: 'open-my-youtube',
     },
     instagram: {
-      url: 'https://www.instagram.com/isabelle.hervouet92/?hl=fr',
+      url: 'https://www.instagram.com/john-doe/?hl=fr',
       title: 'Me contacter sur Instagram',
       label: 'Instagram',
       show: false,
