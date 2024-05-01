@@ -1,6 +1,6 @@
 {
-  "name": "{{websiteTitle}}",
-  "short_name": "{{websiteShortTitle}}",
+  "name": "Smart Web Design",
+  "short_name": "Création Web",
 
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
