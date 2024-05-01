@@ -1,5 +1,6 @@
 import { FC, useCallback } from 'react';
 import { Description } from '../components/Description';
+import { OpenExternalLink } from '../components/OpenExternalLink';
 import { useAnalytics } from '../hooks/useAnalytics';
 import { useHashToScrollIfNeeded } from '../hooks/useHashToScrollIfNeeded';
 import { websiteConfig } from '../website.config';
@@ -119,6 +120,120 @@ export const LandingPage: FC = () => {
                 inspire la paix et le bien-être, renforçant ainsi votre impact et votre présence sur
                 le web.
               </Description>
+              {/* <Link
+                to="/qui-suis-je"
+                className="text-decoration-none text-light"
+                title="En savoir plus sur qui je suis"
+                aria-label="En savoir plus sur qui je suis"
+              >
+                <span className="btn btn-outline-light btn-outline-light-custom fw-bolder my-4 font-raleway">
+                  En savoir plus
+                </span>
+              </Link> */}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="dernieres-realisations"
+        data-bs-target="#navbarSupportedContent"
+        className="w-100"
+        style={{ backgroundColor: 'rgb(50 96 92)' }}
+      >
+        <div
+          className=""
+          style={{
+            backgroundImage: 'url(/images/backgrounds/section-samples.webp)',
+            minHeight: '80vh',
+            backgroundPositionX: '20%',
+            backgroundPositionY: '98%',
+            backgroundSize: 'cover',
+            position: 'relative',
+            overflow: 'hidden',
+            backgroundRepeat: 'no-repeat',
+            zIndex: 1,
+          }}
+        >
+          <div
+            style={{
+              background: 'linear-gradient(to bottom,rgba(6 9 8 / 0%), rgba(55 101 88 / 1%))',
+              minHeight: '80vh',
+            }}
+          >
+            <div className="d-flex flex-column text-light font-raleway fs-3 fw-medium py-4">
+              <div className="w-100 fs-2 fw-bolder">Dernières réalisations</div>
+              <div className="d-flex flex-row flex-wrap justify-content-center align-items-end mb-3 mt-2">
+                <div className="d-flex d-flex-lg flex-column justify-content-center align-items-center p-2">
+                  <OpenExternalLink
+                    className="nav-link"
+                    link="https://marie-anne-sevin.com"
+                    relationship="nofollow"
+                    aria-label="Site web de Marie Anne Sévin"
+                    title="Site web de Marie Anne Sévin"
+                    analyticsEvent="open-external-link"
+                  >
+                    <div className="card card-xl">
+                      <img
+                        src="/images/screenshots/marie-anne-sevin.webp"
+                        className="card-img"
+                        alt="Marie-Anne Sévin"
+                      />
+                    </div>
+                    <div className="figure-caption">
+                      <span>https://marie-anne-sevin.com</span>
+                      <i className="bi bi-box-arrow-up-right ms-3"></i>
+                    </div>
+                  </OpenExternalLink>
+                </div>
+
+                <div className="d-flex d-flex-lg flex-column justify-content-center align-items-center p-2">
+                  <OpenExternalLink
+                    className="nav-link"
+                    link="https://sandra-giraudeau.com/"
+                    relationship="nofollow"
+                    aria-label="Site web de Sandra Giraudeau"
+                    title="Site web de Sandra Giraudeau"
+                    analyticsEvent="open-external-link"
+                  >
+                    <div className="card card-xl">
+                      <img
+                        src="/images/screenshots/sandra-giraudeau.webp"
+                        className="card-img"
+                        alt="Sandra Giraudeau"
+                      />
+                    </div>
+                    <div className="figure-caption">
+                      <span>https://sandra-giraudeau.com</span>
+                      <i className="bi bi-box-arrow-up-right ms-3"></i>
+                    </div>
+                  </OpenExternalLink>
+                </div>
+
+                <div className="d-flex d-flex-lg flex-column justify-content-center align-items-center p-2">
+                  <OpenExternalLink
+                    className="nav-link"
+                    link="https://spirale-interieure.com/"
+                    relationship="nofollow"
+                    aria-label="Site web d'Isabelle Hervouet"
+                    title="Site web d'Isabelle Hervouet"
+                    analyticsEvent="open-external-link"
+                  >
+                    <div className="card card-xl">
+                      <img
+                        src="/images/screenshots/spirale-interieure.webp"
+                        className="card-img"
+                        alt="Spirale intérieure"
+                      />
+                    </div>
+                    <div className="figure-caption">
+                      <span>https://spirale-interieure.com</span>
+                      <i className="bi bi-box-arrow-up-right ms-3"></i>
+                    </div>
+                  </OpenExternalLink>
+                </div>
+              </div>
+
               {/* <Link
                 to="/qui-suis-je"
                 className="text-decoration-none text-light"

@@ -20,7 +20,13 @@ export const HambugerMenu: FC = () => {
       'button#hamburger-close-button',
     ) as HTMLButtonElement;
     try {
-      closeButton.click();
+      setTimeout(() => {
+        try {
+          closeButton.click();
+        } catch (_error) {
+          // no-op
+        }
+      }, 0);
     } catch (_error) {
       // no-op
     }
@@ -28,7 +34,7 @@ export const HambugerMenu: FC = () => {
 
   return (
     <>
-      <nav className="navbar navbar-dark sticky-top position-absolute top-0 end-0 w-100">
+      <nav className="navbar navbar-dark sticky-top position-fixed top-0 end-0 w-100">
         <div
           className={`container-fluid pe-0 me-1 d-flex flex-row ${
             websiteConfig.hamburgerMenuPosition === 'left' ? 'flex-row-reverse' : ''
@@ -136,6 +142,17 @@ export const HambugerMenu: FC = () => {
                       >
                         <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                           Contact
+                        </span>
+                      </Link>
+                      <Link
+                        to="/#dernieres-realisations"
+                        className="text-decoration-none text-light"
+                        title="Dernières réalisations"
+                        aria-label="Dernières réalisations"
+                        onClick={closeBurgerMenuIfNeeded}
+                      >
+                        <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
+                          Dernières réalisations
                         </span>
                       </Link>
                       {/* <Link to="/temoignages" className="text-decoration-none text-light">
