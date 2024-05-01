@@ -37,3 +37,8 @@
 [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 [MDN: Content Security Policy Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
 [Content Security Policy Reference](https://content-security-policy.com/)
+
+## Utils
+
+[CSV to JSON / JSON to CSV](https://github.com/mrodrig/json-2-csv)
+[npm trends for CSV to JSON](https://npmtrends.com/json-2-csv)
