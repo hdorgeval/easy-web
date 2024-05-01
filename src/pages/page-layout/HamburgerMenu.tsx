@@ -1,4 +1,4 @@
-import { FC, useMemo } from 'react';
+import { FC, useCallback, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { websiteConfig } from '../../website.config';
 
@@ -14,6 +14,17 @@ export const HambugerMenu: FC = () => {
     'linear-gradient(to right,rgba(18, 39, 40, 0.39), rgba(73, 69, 77, 0))';
   const defaultRightToLeftBackgroundOverlay =
     'linear-gradient(to left,rgba(39, 54, 54, 0.3), rgba(73, 69, 77, 0))';
+
+  const closeBurgerMenuIfNeeded = useCallback(() => {
+    const closeButton = document.querySelector(
+      'button#hamburger-close-button',
+    ) as HTMLButtonElement;
+    try {
+      closeButton.click();
+    } catch (_error) {
+      // no-op
+    }
+  }, []);
 
   return (
     <>
@@ -100,6 +111,7 @@ export const HambugerMenu: FC = () => {
                         aria-current="page"
                         title="Accueil"
                         aria-label="Accueil"
+                        onClick={closeBurgerMenuIfNeeded}
                       >
                         <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                           Accueil
@@ -120,6 +132,7 @@ export const HambugerMenu: FC = () => {
                         className="text-decoration-none text-light"
                         title="Contact"
                         aria-label="Contact"
+                        onClick={closeBurgerMenuIfNeeded}
                       >
                         <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                           Contact
@@ -137,31 +150,21 @@ export const HambugerMenu: FC = () => {
                       Mes offres
                     </div>
                     <div className="d-flex p-1 flex-row flex-wrap align-items-center">
-                      <Link to="/tarifs#plan-essentiel">
+                      <Link to="/tarifs#plan-essentiel" onClick={closeBurgerMenuIfNeeded}>
                         <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                           Plan Essentiel
                         </span>
                       </Link>
-                      <Link to="/#">
+                      <Link to="/tarifs#plan-pro" onClick={closeBurgerMenuIfNeeded}>
+                        <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
+                          Plan Pro
+                        </span>
+                      </Link>
+                      <Link to="/tarifs#plan-premium" onClick={closeBurgerMenuIfNeeded}>
                         <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                           Plan Premium
                         </span>
                       </Link>
-                      {/* <Link to="/massage-tantrique-tao">
-                      <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                        Massage Tantrique - Tao
-                      </span>
-                    </Link>
-                    <Link to="/sophrologie">
-                      <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                        Sophrologie
-                      </span>
-                    </Link>
-                    <Link to="/constellations-familiales-et-systemiques">
-                      <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                        Constellations familiales et systémiques
-                      </span>
-                    </Link> */}
                     </div>
                   </li>
 
@@ -191,7 +194,7 @@ export const HambugerMenu: FC = () => {
                       <span>Confiance numérique</span>
                     </div>
                     <div className="d-flex p-1 flex-row flex-wrap align-items-center">
-                      <Link to="/mentions-legales">
+                      <Link to="/mentions-legales" onClick={closeBurgerMenuIfNeeded}>
                         <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                           Mentions légales
                         </span>
