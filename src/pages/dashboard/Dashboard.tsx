@@ -31,7 +31,10 @@ export const Dashboard: FC = () => {
             <PageSubTitle className="fs-6">{`Actualisé le ${lastUpdated.longDate}`}</PageSubTitle>
           )}
         </div>
-        <div className="fs-6 mt-4 mx-4 text-start text-light w-100">
+        <div
+          className="fs-6 mt-4 mx-4 text-start text-light"
+          style={{ minWidth: '80vw', width: '80vw' }}
+        >
           <ResponsiveContainer width="100%" height={200}>
             <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
               <defs>

@@ -40,7 +40,7 @@ export const PublicPageLayoutWithFixedBackgroundGradient: FC<
             height: '100vh',
           }}
         >
-          <div className="container h-100 d-flex flex-column align-items-center overflow-y-scroll">
+          <div className="h-100 d-flex flex-column align-items-center overflow-y-scroll">
             {children}
             <Footer />
           </div>
