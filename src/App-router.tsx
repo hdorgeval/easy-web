@@ -7,6 +7,7 @@ import { ErrorPage } from './pages/ErrorPage';
 import { LandingPage } from './pages/LandingPage';
 import { MentionsLegales } from './pages/MentionsLegales';
 import { Tarifs } from './pages/Tarifs';
+import { Dashboard } from './pages/dashboard/Dashboard';
 
 export const router = createBrowserRouter([
   {
@@ -37,5 +38,9 @@ export const router = createBrowserRouter([
   {
     path: '/mentions-legales',
     element: <MentionsLegales />,
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard />,
   },
 ]);
