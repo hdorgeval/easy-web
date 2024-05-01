@@ -14,11 +14,11 @@ export const DernieresRealisations: FC = () => {
       htmlTitle={`Dernières réalisations | ${websiteConfig.websiteTitle}`}
     >
       <div className="d-flex flex-column justify-content-start align-items-center">
-        <div className="mt-4 p-4">
+        <div className="mt-4 py-4 px-5">
           <PageTitle>Dernières réalisations</PageTitle>
         </div>
         <div className="" style={{ minHeight: '1vh' }}></div>
-        <div className="container-fluid d-flex flex-row flex-wrap justify-content-center align-items-stretch  py-2 px-0 py-4">
+        <div className="container-fluid d-flex flex-row flex-wrap justify-content-center align-items-stretch  py-2 px-0">
           <div className="d-flex d-flex-lg flex-column justify-content-center align-items-center p-2">
             <OpenExternalLink
               className="nav-link"
