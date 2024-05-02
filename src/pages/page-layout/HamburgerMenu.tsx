@@ -172,14 +172,14 @@ export const HambugerMenu: FC = () => {
                           Plan Essentiel
                         </span>
                       </Link>
-                      <Link to="/tarifs#plan-pro" onClick={closeBurgerMenuIfNeeded}>
-                        <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
-                          Plan Pro
-                        </span>
-                      </Link>
                       <Link to="/tarifs#plan-premium" onClick={closeBurgerMenuIfNeeded}>
                         <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
                           Plan Premium
+                        </span>
+                      </Link>
+                      <Link to="/tarifs#plan-pro" onClick={closeBurgerMenuIfNeeded}>
+                        <span className="badge rounded-pill text-bg-badge-burger-menu fs-7 border border-secondary m-1">
+                          Plan Pro
                         </span>
                       </Link>
                     </div>
