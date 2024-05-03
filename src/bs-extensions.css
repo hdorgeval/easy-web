@@ -441,3 +441,9 @@ input.form-rdv-light-brown:-webkit-autofill {
   --bs-btn-disabled-border-color: #f8f9fa;
   --bs-gradient: none;
 }
+
+.card-up {
+  border-radius: var(--bs-card-border-radius) !important;
+  border-bottom-left-radius: 0% !important;
+  border-bottom-right-radius: 0% !important;
+}

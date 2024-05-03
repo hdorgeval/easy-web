@@ -7,6 +7,7 @@ import { ErrorPage } from './pages/ErrorPage';
 import { LandingPage } from './pages/LandingPage';
 import { MentionsLegales } from './pages/MentionsLegales';
 import { Tarifs } from './pages/Tarifs';
+import { Testimonies } from './pages/Testimonies';
 import { Dashboard } from './pages/dashboard/Dashboard';
 
 export const router = createBrowserRouter([
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
   {
     path: '/dernieres-realisations',
     element: <DernieresRealisations />,
+  },
+  {
+    path: '/temoignages',
+    element: <Testimonies />,
   },
   {
     path: '/contact/success',
