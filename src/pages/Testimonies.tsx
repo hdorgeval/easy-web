@@ -8,9 +8,9 @@ import { PublicPageLayoutWithFixedBackgroundImage } from './page-layout/PublicPa
 export const Testimonies: FC = () => {
   return (
     <PublicPageLayoutWithFixedBackgroundImage
-      backgroundImageUrl="/images/backgrounds/contact-me.webp"
+      backgroundImageUrl="/images/backgrounds/testimonies.webp"
       backgroundOverlay="linear-gradient(to bottom,rgba(0, 0, 0, 0.0), rgba(79, 79, 93, 0.0))"
-      backgroundPositionX="90%"
+      backgroundPositionX="24%"
       backgroundPositionY="35%"
       htmlTitle={`Témoignages | ${websiteConfig.websiteTitle}`}
     >
@@ -23,13 +23,13 @@ export const Testimonies: FC = () => {
           <div
             className="card card-xl"
             style={{
-              backgroundColor: 'rgb(0 255 255 / 25%)',
+              backgroundColor: 'rgb(28 50 61 / 49%)',
             }}
           >
             <div
               className="card-up"
               style={{
-                backgroundColor: 'rgb(38 66 178 / 40%)',
+                backgroundColor: 'rgb(23 59 77 / 48%)',
                 minHeight: '120px',
                 height: '120px',
                 overflow: 'hidden',
